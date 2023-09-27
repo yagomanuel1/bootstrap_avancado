@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Eletrônicos | E-commerce de tecnologia</title>
+    <link rel="stylesheet" href="Lib/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_css_bootstrap.min.css">
+    <style>
+    .navbar-nav .nav-link.active {
+        color: #111111;
+        background-color: #ffffff;;
+    }
+
+    a.nav-link {
+        color: #ff5100;
+    }
+
+    h1 {
+        color: #ff5100;
+    }
+
+    button {
+        background-color: #ff5100;
+        color: #111111;
+    }
+
+    .nav-item {
+        color: #ff5100;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    section {
+        height: 100vh;
+        padding-top: 65px;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #111111;
+    }
+
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .produto {
+        border: none;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Tiger Eletrônicos</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promocoes">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="btn-checar-carrinho" class="btn btn-secondary" type="button">Seu carrinho</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="carousel-exemplo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="5000" class="carousel-item active">
+                <img src="images/carousel1.png">
+            </div>
+            <div data-bs-interval="5000" class="carousel-item">
+                <img src="images/carousel2.png">
+            </div>
+            <div data-bs-interval="5000" class="carousel-item">
+                <img src="images/carousel3.png">
+            </div>
+        </div>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class="active" type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+            <section>
+                <div class="row">
+                    <article class="produto col-md-4 col-sm-6 col-12">
+                        <img src="images/playstation.png">
+                        <h3>
+                            Playstation 5
+                        </h3>
+                        <div class="price">
+                            <h4>R$3800,00</h4>
+                        </div>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article class="produto col-md-4 col-sm-6 col-12">
+                        <img src="images/iphone.png">
+                        <h3>
+                            iPhone 14 Pro Max
+                        </h3>
+                        <div class="price">
+                            <h4>R$6400,00</h4>
+                        </div>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article class="produto col-md-4 col-sm-6 col-12">
+                        <img src="images/placavideo.png">
+                        <h3>
+                            RTX 3060
+                        </h3>
+                        <div class="price">
+                            <h4>R$2400,00</h4>
+                        </div>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article class="produto col-md-4 col-sm-6 col-12">
+                        <img src="images/samsumg.png">
+                        <h3>
+                            Galaxy s23 Ultra
+                        </h3>
+                        <div class="price">
+                            <h4>R$5200,00</h4>
+                        </div>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article class="produto col-md-4 col-sm-6 col-12">
+                        <img src="images/fone.png">
+                        <h3>
+                            Fone Bluetooth
+                        </h3>
+                        <div class="price">
+                            <h4>R$800,00</h4>
+                        </div>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="mensagens-alerta" class="toast">
+            <header class="toast-header">
+                <strong>Carrinho Tiger!</strong>
+            </header>
+            <div class="toast-body">
+                Seu carrinho está vazio
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" class="btn btn-secondary" type="button">
+                        Voltar as compras
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Tiger Eletrônicos - Todos os direitos reservados - 2023
+            </p>
+        </div>
+    </footer>
+
+    <script src="Lib/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_js_bootstrap.bundle.min.js"></script>
+    <script>
+        const ativadorToast = document.getElementById('btn-checar-carrinho')
+        const mensagem = document.getElementById('mensagens-alerta')
+
+        if (ativadorToast) {
+            ativadorToast.addEventListener('click', function() {
+                const toast = new bootstrap.Toast(mensagem);
+                toast.show();
+            })
+        }
+    </script>
+</body>
+</html>
